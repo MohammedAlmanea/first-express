@@ -8,6 +8,9 @@ const app = (0, express_1.default)();
 const port = 3000;
 //set Endpoint
 app.get('/api', (req, res) => {
+    res.send('This is the /api route ');
+});
+app.get('', (req, res) => {
     res.send('server working!');
 });
 //check for port to avoid already in use error testing
