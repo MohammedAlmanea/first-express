@@ -1,6 +1,8 @@
 import express from 'express';
 const routes = express.Router();
 
-routes.get('/api', (req, res) => {
+routes.get('/', (req, res) => {
   res.send('connected');
 });
+
+export default routes;
