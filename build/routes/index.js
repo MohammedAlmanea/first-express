@@ -7,8 +7,9 @@ const express_1 = __importDefault(require("express"));
 const teachers_1 = __importDefault(require("./api/teachers"));
 const students_1 = __importDefault(require("./api/students"));
 const classroom_1 = __importDefault(require("./api/classroom"));
+const logger_1 = __importDefault(require("./logger"));
 const routes = express_1.default.Router();
-routes.get('/', (req, res) => {
+routes.get('/', logger_1.default, (req, res) => {
     res.send('connected to main route');
 });
 routes.use('/teachers', teachers_1.default);

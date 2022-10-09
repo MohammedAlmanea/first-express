@@ -5,7 +5,7 @@ const logger = (
   res: express.Response,
   next: Function
 ): void => {
-  let url = req.url;
+  let url = req.baseUrl;
   console.log(`${url} was visited`);
   next();
 };
